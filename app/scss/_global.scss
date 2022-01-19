@@ -46,6 +46,19 @@ input{
     margin: 1px 1px 9px 1px;
     padding: 0;
 }
+
+.videoleft{
+    width: calc(100% - 32px);
+    margin: 0 16px;
+    padding: 0;
+}
+
+.videoright{
+    width: calc(100% - 32px);
+    margin: 0 16px;
+    padding: 0;
+}
+
 header, section, video{
     margin: 0;
     padding: 0;
@@ -60,6 +73,10 @@ header{
 
     .half{
         width: 50%;
+    }
+
+    .quarter{
+        width: 25%;
     }
 
     .ai-c {
@@ -85,20 +102,7 @@ header{
         font-family: 'Exo 2', sans-serif;
         font-size: 18px;
     }
-    #mc-embedded-subscribe{
-        display: inline-block;
-        margin: 8px 16px 16px 16px;
-        border: 0px solid #999;
-        width: 455px;
-        height: 48px;
-        font-family: 'Exo 2', sans-serif;
-        font-size: 20px;
-        padding-bottom: 4px;
-        border-bottom: 8px solid $title-bgcolorshadow;
-        background: $title-bgcolor;
-        display: inline-block;
-        color: $title-color;
-    }
+
 
     .response{
         color: $title-color;
@@ -107,6 +111,31 @@ header{
         font-family: 'Exo 2', sans-serif;
         text-align: center;
     }
+}
+
+#mc-embedded-subscribe, .link-button {
+    display: inline-block;
+    margin: 8px 16px 16px 16px;
+    border: 0px solid #999;
+    width: 455px;
+    height: 48px;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 20px;
+    padding-bottom: 4px;
+    border-bottom: 8px solid $title-bgcolorshadow;
+    background: $title-bgcolor;
+    display: inline-block;
+    color: $title-color;
+    text-decoration: none;
+    text-align: center;
+    line-height: 38px;
+}
+
+.link-button-pressed, .link-button:active{
+    border-top: 8px solid $box-color;
+    background:$title-bgcolorshadow;
+    line-height: 38px;
+
 }
 
 .box-separator{
@@ -191,4 +220,21 @@ footer{
     p{
         margin: 0;
     }
+}
+
+.manga{
+    width: calc(100% - 32px);
+    margin: 0 16px;
+  }
+
+#soundtrack-container iframe{
+    display:block;
+    margin: 0 auto;
+}
+.hidden{
+    display:none;
+}
+
+.gifts-logo{
+    width:100%;
 }

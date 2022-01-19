@@ -1,0 +1,86 @@
+<div class="box-separator box"></div>
+<div class="box flex">
+    <h1>Comic Strip</h1>
+</div>
+
+<div class="box" id="comic-container">
+    <div class="flex">
+        <div class="quarter"></div>
+        <a id="left" class="quarter link-button" href="#manga">&lt; Prev</a>
+        <a id="right" class="quarter link-button" href="#manga">Next &gt;</a>
+        <div class="quarter"></div>
+    </div>
+    
+    <img class="manga" id="manga0" src="/images/comic/00-new.png" />
+    <img class="manga" id="manga1" src="/images/comic/01-new.png" />
+    <img class="manga" id="manga2" src="/images/comic/02-new.png" />
+    <img class="manga" id="manga3" src="/images/comic/03-new.png" />
+    <img class="manga" id="manga4" src="/images/comic/04-new.png" />
+    <img class="manga" id="manga5" src="/images/comic/05-new.png" />
+</div>
+<div class="box-separator box"></div>
+
+
+<script>
+    let count = 0;
+    let images = [
+            "/images/comic/00-new.png", 
+            "/images/comic/01-new.png", 
+            "/images/comic/02-new.png", 
+            "/images/comic/03-new.png", 
+            "/images/comic/04-new.png", 
+            "/images/comic/05-new.png"];
+    let panelIds = [
+            "#manga0", 
+            "#manga1", 
+            "#manga2", 
+            "#manga3", 
+            "#manga4", 
+            "#manga5"];
+    $(function  () {
+        
+        function RefreshPanels(){
+            panelIds.forEach((element,index) => {
+                if(index == count)
+                    $(element).fadeIn()
+                else
+                    $(element).hide()
+            });
+        }
+
+        $("#left").click(function (e) {
+            e.preventDefault();
+            if(count == 0)
+                count = images.length-1;
+            else 
+                count--;
+            
+            RefreshPanels();
+            
+
+        });
+        $("#right").click(function (e) {
+            e.preventDefault();
+            count = (count+1) % images.length;
+            RefreshPanels();
+        });
+        RefreshPanels();
+
+    });
+
+
+    function preload(arrayOfImages) {
+    $(arrayOfImages).each(function(){
+        $('<img/>')[0].src = this;
+        // Alternatively you could use:
+        // (new Image()).src = this;
+    });
+}
+
+    preload(images);
+
+
+
+
+
+</script>

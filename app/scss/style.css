@@ -29,7 +29,7 @@ input {
 }
 
 .box {
-  background-color: #cc0547;
+  background-color: #FD0050;
 }
 
 .header {
@@ -46,6 +46,18 @@ input {
   z-index: 0;
   width: calc(100% - 2px);
   margin: 1px 1px 9px 1px;
+  padding: 0;
+}
+
+.videoleft {
+  width: calc(100% - 32px);
+  margin: 0 16px;
+  padding: 0;
+}
+
+.videoright {
+  width: calc(100% - 32px);
+  margin: 0 16px;
   padding: 0;
 }
 
@@ -67,6 +79,10 @@ header {
 
 .flex .half {
   width: 50%;
+}
+
+.flex .quarter {
+  width: 25%;
 }
 
 .flex .ai-c {
@@ -92,7 +108,15 @@ header {
   font-size: 18px;
 }
 
-#mc_embed_signup #mc-embedded-subscribe {
+#mc_embed_signup .response {
+  color: #333;
+  background-color: #FED404;
+  margin: 8px 16px 0px 16px;
+  font-family: 'Exo 2', sans-serif;
+  text-align: center;
+}
+
+#mc-embedded-subscribe, .link-button {
   display: inline-block;
   margin: 8px 16px 16px 16px;
   border: 0px solid #999;
@@ -105,14 +129,15 @@ header {
   background: #FED404;
   display: inline-block;
   color: #333;
+  text-decoration: none;
+  text-align: center;
+  line-height: 38px;
 }
 
-#mc_embed_signup .response {
-  color: #333;
-  background-color: #FED404;
-  margin: 8px 16px 0px 16px;
-  font-family: 'Exo 2', sans-serif;
-  text-align: center;
+.link-button-pressed, .link-button:active {
+  border-top: 8px solid #FD0050;
+  background: #D7B40A;
+  line-height: 38px;
 }
 
 .box-separator {
@@ -187,7 +212,7 @@ p, ul li {
 }
 
 footer {
-  background: #cc0547;
+  background: #FD0050;
   text-align: center;
   margin: 0;
   padding: 8px 0;
@@ -195,5 +220,23 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+.manga {
+  width: calc(100% - 32px);
+  margin: 0 16px;
+}
+
+#soundtrack-container iframe {
+  display: block;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.gifts-logo {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

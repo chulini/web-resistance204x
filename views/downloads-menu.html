@@ -1,0 +1,54 @@
+<div class="box-separator box"></div>
+<div class="box flex">
+    <a  class="gifts-logo" href="/"><img src="/images/logo.svg"></a>
+</div>
+
+<div class="box-separator"></div>
+
+<div class="box-separator box"></div>
+<div class="box flex">
+    <h1>Choose your gift</h1>
+</div>
+
+<div class="box flex">
+    <div class="half">
+        <a class="link-button" href="#comic-container" id="comic-menu-button">Comic Strip</a>
+    </div>
+    <div class="half">
+        <a class="link-button" href="#" id="soundtrack-menu-button">Soundtrack Preview</a>
+    </div>
+</div>
+
+<script>
+    let pressed = "none"; //none, comic, soundtrack
+    $(function  () {
+        $("#comic-menu-button").click(function (e) {
+            e.preventDefault();
+            if(pressed !== "comic")
+            {
+                pressed = "comic";
+                $("#comic-menu-button").addClass("link-button-pressed");
+                $("#soundtrack-menu-button").removeClass("link-button-pressed");
+                $("#soundtrack-section").fadeOut(() =>{
+                    $("#comic-section").fadeIn();
+                });
+            }
+        });
+
+        $("#soundtrack-menu-button").click(function (e) {
+            e.preventDefault();
+            if(pressed !== "soundtrack")
+            {
+                pressed = "soundtrack";
+                $("#soundtrack-menu-button").addClass("link-button-pressed");
+                $("#comic-menu-button").removeClass("link-button-pressed");
+                $("#comic-section").fadeOut(() =>{
+                    $("#soundtrack-section").fadeIn();
+                });
+            }
+        });
+        $("#comic-section").hide();
+        $("#soundtrack-section").hide();
+
+    });
+</script>
