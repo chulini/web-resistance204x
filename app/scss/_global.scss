@@ -73,6 +73,7 @@ header{
 
     .half{
         width: 50%;
+        position: relative;
     }
 
     .quarter{
@@ -93,7 +94,7 @@ header{
     
     input.email{
         display: inline-block;
-        width: 455px;
+        width: calc(100% - 32px);
         height: 32px;
         vertical-align: top;
         margin: 0 16px;
@@ -117,7 +118,7 @@ header{
     display: inline-block;
     margin: 8px 16px 16px 16px;
     border: 0px solid #999;
-    width: 455px;
+    width: calc(100% - 32px);
     height: 48px;
     font-family: 'Exo 2', sans-serif;
     font-size: 20px;
@@ -185,8 +186,10 @@ p, ul li{
 }
 .feature-description-align-right{
     top: 50%;
-    // left:60%;
-    transform: translateY(-50%) translateX(66%);
+    right: 8px;
+    
+    transform: translateY(-50%);
+    position: absolute;
     h2{
         text-align: right;
     }
@@ -230,6 +233,9 @@ footer{
 #soundtrack-container iframe{
     display:block;
     margin: 0 auto;
+    max-width: 560px;
+    height: 315px;
+    width: 100%;
 }
 .hidden{
     display:none;
@@ -237,4 +243,49 @@ footer{
 
 .gifts-logo{
     width:100%;
+}
+
+@media all and (max-width: 600px){
+    
+    .flex{
+        flex:flex;
+        flex-wrap: wrap;
+        .half{
+            width: 100%;
+            display: inline-block;
+        }
+
+        .quarter{
+            width: 60%;
+            display: inline-block;
+            margin: 8px auto;
+        }
+        
+    }
+
+    .feature-description-align-right{
+        top: 50%;
+        right: inherit;
+    
+        transform: translateY(-50%);
+        position: inherit;
+        h2{
+            text-align: inherit;
+        }
+        p{
+            text-align: inherit;
+        }     
+    }
+
+    .feature-description-container{
+        width: 100%;
+    }
+
+    #game-description-container img{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .flex-align-right{
+        flex-wrap: wrap-reverse;
+    }
 }

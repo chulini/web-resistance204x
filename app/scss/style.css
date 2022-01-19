@@ -79,6 +79,7 @@ header {
 
 .flex .half {
   width: 50%;
+  position: relative;
 }
 
 .flex .quarter {
@@ -98,7 +99,7 @@ header {
 
 #mc_embed_signup input.email {
   display: inline-block;
-  width: 455px;
+  width: calc(100% - 32px);
   height: 32px;
   vertical-align: top;
   margin: 0 16px;
@@ -120,7 +121,7 @@ header {
   display: inline-block;
   margin: 8px 16px 16px 16px;
   border: 0px solid #999;
-  width: 455px;
+  width: calc(100% - 32px);
   height: 48px;
   font-family: 'Exo 2', sans-serif;
   font-size: 20px;
@@ -190,8 +191,10 @@ p, ul li {
 
 .feature-description-align-right {
   top: 50%;
-  -webkit-transform: translateY(-50%) translateX(66%);
-          transform: translateY(-50%) translateX(66%);
+  right: 8px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
 }
 
 .feature-description-align-right h2 {
@@ -230,6 +233,9 @@ footer p {
 #soundtrack-container iframe {
   display: block;
   margin: 0 auto;
+  max-width: 560px;
+  height: 315px;
+  width: 100%;
 }
 
 .hidden {
@@ -238,5 +244,48 @@ footer p {
 
 .gifts-logo {
   width: 100%;
+}
+
+@media all and (max-width: 600px) {
+  .flex {
+    -webkit-box-flex: flex;
+        -ms-flex: flex;
+            flex: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .flex .half {
+    width: 100%;
+    display: inline-block;
+  }
+  .flex .quarter {
+    width: 60%;
+    display: inline-block;
+    margin: 8px auto;
+  }
+  .feature-description-align-right {
+    top: 50%;
+    right: inherit;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    position: inherit;
+  }
+  .feature-description-align-right h2 {
+    text-align: inherit;
+  }
+  .feature-description-align-right p {
+    text-align: inherit;
+  }
+  .feature-description-container {
+    width: 100%;
+  }
+  #game-description-container img {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .flex-align-right {
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+  }
 }
 /*# sourceMappingURL=style.css.map */
