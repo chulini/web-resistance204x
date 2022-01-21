@@ -33,7 +33,7 @@ input{
 }
 
 .wrapper{
-    max-width: 980px;
+    max-width: 960px;
     margin: 0 auto;
     position: relative;
 }
@@ -42,8 +42,8 @@ input{
 
 .video{
     z-index: 0;
-    width: calc(100% - 2px);
-    margin: 1px 1px 9px 1px;
+    width: 100%;
+    margin: 0 0 9px 0;
     padding: 0;
 }
 
