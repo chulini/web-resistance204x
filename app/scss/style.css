@@ -23,8 +23,8 @@ input {
 
 #homevideo-game-logo {
   position: absolute;
-  top: 410px;
-  right: -32px;
+  top: -6px;
+  left: -29px;
   width: 256px;
 }
 
@@ -35,7 +35,6 @@ input {
 .header {
   background-color: #FD0050;
 }
-
 
 .wrapper {
   max-width: 960px;
@@ -48,6 +47,10 @@ input {
   width: 100%;
   margin: 0 0 9px 0;
   padding: 0;
+}
+
+.videopreview {
+  background-color: black;
 }
 
 .videoleft {
