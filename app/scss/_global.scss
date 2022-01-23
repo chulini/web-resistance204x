@@ -25,8 +25,8 @@ input{
 
 #homevideo-game-logo{
     position: absolute;
-    top: -6px;
-    left: -29px;
+    top: -0.5%;
+    left: -3%;
     width: 26%;
 }
 
@@ -263,6 +263,10 @@ footer{
 }
 @media all and (max-width: 600px){
     
+    #homevideo-game-logo{
+        top: -0.1%;
+    }
+
     .flex{
         flex:flex;
         flex-wrap: wrap;
