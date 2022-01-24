@@ -1,12 +1,47 @@
       
-    <video class="video" id="preview-video-pc" muted playsinline autoplay="autoplay" loop>
+    <video class="video" id="preview-video-pc" muted autoplay="autoplay" loop>
       <source src="/videos/general-fight.webm?v=0" type="video/webm">
       Your browser does not support the video tag.
     </video>
-    <video class="video" id="preview-video-mobile" muted playsinline controls loop>
+    <div id="game-preview-mobile">
+      <img id="game-preview-gif" src="/videos/special-attacks.gif" width="100%"/>
+      
+      <script type="text/javascript">
+        function delayAsync(ms) {
+            return new Promise(p_resolve => setTimeout(p_resolve, ms));
+        }
+
+        async function SetGif(path,duration,callback) {
+            // console.log(path);
+            $('#game-preview-gif').attr('src', path)
+            await delayAsync(duration);
+            if (callback instanceof Function) {
+                callback();
+            }
+        }
+
+        let amp = 1.5;
+        function LoopGifts() {
+            return new Promise(async (resolve, reject) => {
+                await SetGif('/videos/special-attacks.gif', 7540*amp);
+                await SetGif('/videos/footsies.gif', 8000*amp);
+                await SetGif('/videos/win-the-match.gif', 6060*amp);
+                resolve();
+            });
+        }
+        LoopGifts();
+        setInterval(LoopGifts, 21600*amp);
+
+
+      </script>
+     
+    </div>
+    <!-- <video class="video" id="preview-video-mobile" muted playsinline controls loop>
       <source src="/videos/general-fight.webm?v=0" type="video/webm">
       Your browser does not support the video tag.
-    </video>
+    </video> -->
+
+    <!-- <iframe width="100%" height="100%" id="preview-video-mobile" src="https://www.youtube.com/embed/KIZoDOygB-E?autoplay=1&controls=0&loop=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
     <img id="homevideo-game-logo" src="/images/logo.svg" alt="Resistance 204X Logo">
 
 

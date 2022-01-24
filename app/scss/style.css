@@ -563,4 +563,8 @@ footer p {
             transform: scale(1);
   }
 }
+
+#game-preview-mobile {
+  display: none;
+}
 /*# sourceMappingURL=style.css.map */
