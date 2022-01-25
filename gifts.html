@@ -3,6 +3,16 @@
 <head data-include="head">
   <title>Resistance 204X: Your free gifts</title>
 </head>
+<script>
+  function get(name){
+   if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
+      return decodeURIComponent(name[1]);
+  }
+  let token = get('token');
+  if(token !== 'a71955d2-8f1a-4475-a228-b62f941b93de'){
+    window.location.href='/'
+  }
+</script>
 <body>
     <div class="wrapper">
       <div class="box-separator"></div>

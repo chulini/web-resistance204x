@@ -25,7 +25,7 @@ function SwitchToMobileVersion(){
       }
   }
 
-  let amp = 1.5;
+  let amp = 1.3;
   function LoopGifts() {
       return new Promise(async (resolve, reject) => {
           await SetGif('/videos/special-attacks.gif', 7540*amp);
@@ -49,7 +49,7 @@ $(document).ready(function() {
     let file = 'views/' + $(this).data('include') + '.html?v=1'
     $(this).load(file, ()=>{
       if (i+1 === count && IsMobile()) {        
-        setTimeout(SwitchToMobileVersion, 100)
+        setTimeout(SwitchToMobileVersion, 1000)
       }
     })
     
