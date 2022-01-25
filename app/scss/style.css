@@ -42,6 +42,7 @@ input {
   max-width: 960px;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
 }
 
 .no-bg {

@@ -41,6 +41,7 @@ input{
     max-width: 960px;
     margin: 0 auto;
     position: relative;
+    overflow: hidden;
 }
 
 .no-bg{
@@ -128,7 +129,7 @@ header{
     }
 }
 
-#mc-embedded-subscribe, .link-button {
+#mc-embedded-subscribe, .link-button{
     display: inline-block;
     margin: 8px 16px 16px 16px;
     border: 0px solid #999;
@@ -150,8 +151,9 @@ header{
     border-top: 8px solid $box-color;
     background:$title-bgcolorshadow;
     line-height: 38px;
-
 }
+
+
 
 .box-separator{
     height: 16px;
